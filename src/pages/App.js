@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from 'components/Menu';
 import App from './AppFunction';
 import './App.css';
 import './Coin.css';
