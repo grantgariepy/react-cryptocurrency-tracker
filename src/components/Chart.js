@@ -40,8 +40,8 @@ export default class Chart extends Component {
         chart.hoverMode("none")
       })
       return <AnyChart
-          width={800}
-          height={600}
+          width={'100%'}
+          height={900}
           instance={chart}
       />;
   }
