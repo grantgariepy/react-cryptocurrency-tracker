@@ -7,6 +7,7 @@ export default class Chart extends Component {
         var coinId = this.props.location.state.coinId.id
         var coinName = this.props.location.state.coinName.name
         var chart = anychart.stock();
+        chart.tooltip(false)
         // var theName = () => {return };
         anychart.data.loadJsonFile("https://api.coingecko.com/api/v3/coins/" + coinId + "/ohlc?vs_currency=usd&days=365", function (data) {
         // create a data table
@@ -15,7 +16,6 @@ export default class Chart extends Component {
         // map data
         var mapping = dataTable.mapAs({ 'open': 1, 'high': 2, 'low': 3, 'close': 4 });
         // set the chart type
-        
         // set the series
         var series = chart.plot(0).candlestick(mapping);
         series.name(coinName + " Price Data");
