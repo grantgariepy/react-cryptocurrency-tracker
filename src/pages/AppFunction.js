@@ -16,12 +16,12 @@ function App() {
           <div>
             <nav>
               <ul>
-                <li>
+                {/* <li>
                   <Link to="/">Home</Link>
                 </li>
                 <li>
                   <Link to="/about">About</Link>
-                </li>
+                </li> */}
               </ul>
             </nav>
     
@@ -60,7 +60,7 @@ function App() {
 
       return <div className="coin-app">
               <div className="coin-search">
-                <h1 className="coin-text">Search</h1>
+                <h1 className="coin-text">Cryptocurrency Prices</h1>
                 <form>
                   <input type="text" className="coin-input" placeholder="Search" onChange={handleChange}/>
                 </form>

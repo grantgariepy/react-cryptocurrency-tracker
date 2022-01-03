@@ -12,16 +12,9 @@ export default class Chart extends Component {
         //set type of chart
         var chart = anychart.stock();
 
-
-
-        
         //if posistion mode is 'float', chart disappears 
         //if position mode is 'point', tooltip doesn't render
-        chart.tooltip().positionMode('float');
-        
-        
-        
-        
+        chart.tooltip().positionMode('point');
         
         //chart background color
         chart.background().fill("#282c34");
@@ -53,13 +46,11 @@ export default class Chart extends Component {
           openValue.addField('value', 2);
           // create a scroller series with the mapped data
           chart.scroller().column(openValue);
-          
-          
       })
-      chart.tooltip().anchor("bottomLeft");
+      
       return <AnyChart
           width={'100%'}
-          height={900}
+          height={850}
           instance={chart}
       />;
   }
